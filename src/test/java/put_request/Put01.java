@@ -88,6 +88,4 @@ public class Put01 extends JsonPlaceHolderBaseUrl {
 
     }
 
-
-
 }
