@@ -84,7 +84,8 @@ public class PostCountry extends GmiBankBaseUrl {
 
 
         //Send the request and get the response
-        Response response = given(spec).contentType(ContentType.JSON).header("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJrX3R3YWluIiwiYXV0aCI6IlJPTEVfQURNSU4sUk9MRV9NQU5BR0VSIiwiZXhwIjoxNjg1OTA3NTA0fQ.HA-zTF9SmAbzJcZfjpK2zgOWPegxXlr3qqTBURKD-4JN_uJDXBQRKXBlsmxqtVeRhDwGoTMgrStie-FKdE9KJQ").body(expectedData).post("{first}/{second}");
+        Response response = given(spec).body(expectedData).post("{first}/{second}");
+        //Response response = given(spec).contentType(ContentType.JSON).header("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJrX3R3YWluIiwiYXV0aCI6IlJPTEVfQURNSU4sUk9MRV9NQU5BR0VSIiwiZXhwIjoxNjg1OTA3NTA0fQ.HA-zTF9SmAbzJcZfjpK2zgOWPegxXlr3qqTBURKD-4JN_uJDXBQRKXBlsmxqtVeRhDwGoTMgrStie-FKdE9KJQ").body(expectedData).post("{first}/{second}");
         response.prettyPrint();
 
     }
